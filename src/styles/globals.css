@@ -2,7 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General Sans */
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/public/fonts/GeneralSans/GeneralSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'GeneralSans-Italic';
+  src: url('/public/fonts/GeneralSans/GeneralSans-Italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'GeneralSans-Medium';
+  src: url('/public/fonts/GeneralSans/GeneralSans-Medium.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'GeneralSans-MediumItalic';
+  src: url('/public/fonts/GeneralSans/GeneralSans-MediumItalic.woff2') format('woff2');
+}
+
+
 :root {
+
+  /* Colors */
+  --primary: #FFF4E4;
+  --secondary: #FF7A41;
+
+  /* Fonts */
+  --h1: clamp(2.5rem, 6vw + 0.5rem, 3.81rem);
+  --h2: clamp(2rem, 5vw + 0.5rem, 3.06rem);
+  --h3: clamp(1.6rem, 4vw + 0.5rem, 2.44rem);
+  --h4: clamp(1.3rem, 3vw + 0.5rem, 1.94rem);
+  --s-h1: clamp(1.1rem, 2.5vw + 0.5rem, 1.56rem);
+  --s-h2: clamp(0.9rem, 2vw + 0.5rem, 1.25rem);
+  --b1: clamp(0.8rem, 1.8vw + 0.5rem, 1rem);
+  --b2: clamp(0.6rem, 1.5vw + 0.5rem, 0.81rem);
+  --b3: clamp(0.4rem, 1vw + 0.5rem, 0.62rem);
+  --title: clamp(3rem, 8vw + 0.5rem, 5.9rem);
 
 }
 
@@ -10,4 +45,9 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--primary);
+}
+
+*{
+  border: 1px solid red;;
 }
