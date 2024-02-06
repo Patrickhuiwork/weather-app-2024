@@ -37,6 +37,14 @@
     border-radius: 2rem;
 }
 
+.container2 h2{
+    font-size: var(--h2);
+
+    @media screen and (max-width: 768px){
+        text-align: center;
+    }
+}
+
 .fiveboxes{
     display: flex;
     flex-direction: row;
@@ -48,11 +56,11 @@
 }
 
 .weathercontainer{
-    width: 15%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     @media screen and (max-width: 768px){
-        width: 100%;
-        margin-bottom: 2rem;
+        flex-direction: row;
         justify-content: space-between;
+        padding: 1rem;
     }
 }

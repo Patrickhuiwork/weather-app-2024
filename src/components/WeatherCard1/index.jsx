@@ -19,41 +19,50 @@ export default function index() {
       <div className={styles.container2}>
         <h2>Tommorow Forecast</h2>
         <div className={styles.fiveboxes}>
-          <div className={styles.weathercontainer}>
-            <p>time</p>
-            <p>Weather Condition</p>
-            <p>Temperature</p>
-          </div>
-          <div className={styles.weathercontainer}>
-            <p>time</p>
-            <p>Weather Condition</p>
-            <p>Temperature</p>
-          </div>
-          <div className={styles.weathercontainer}>
-            <p>time</p>
-            <p>Weather Condition</p>
-            <p>Temperature</p>
-          </div>
-          <div className={styles.weathercontainer}>
+        <div className={styles.weathercontainer}>
             <div>
               <p>Weather Condition</p>
-
             </div>
             <div>
               <p>time</p>
               <p>Temperature</p>
-
             </div>
           </div>
           <div className={styles.weathercontainer}>
-            <p>time</p>
-            <p>Weather Condition</p>
-            <p>Temperature</p>
+            <div>
+              <p>Weather Condition</p>
+            </div>
+            <div>
+              <p>time</p>
+              <p>Temperature</p>
+            </div>
           </div>
           <div className={styles.weathercontainer}>
-            <p>time</p>
-            <p>Weather Condition</p>
-            <p>Temperature</p>
+            <div>
+              <p>Weather Condition</p>
+            </div>
+            <div>
+              <p>time</p>
+              <p>Temperature</p>
+            </div>
+          </div>
+          <div className={styles.weathercontainer}>
+            <div>
+              <p>Weather Condition</p>
+            </div>
+            <div>
+              <p>time</p>
+              <p>Temperature</p>
+            </div>
+          </div>
+          <div className={styles.weathercontainer}>
+            <div>
+              <p>Weather Condition</p>
+            </div>
+            <div>
+              <p>time</p>
+              <p>Temperature</p>
+            </div>
           </div>
         </div>
       </div>

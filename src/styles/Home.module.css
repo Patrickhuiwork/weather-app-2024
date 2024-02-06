@@ -5,11 +5,48 @@
     justify-content: center;
     padding: 0 20px;
     text-align: left;
-    height: auto;
     background-color: var(--primary);
     color: var(--secondary);
+    height: 100vh;
 }
 
+.scroll{
+    padding-top: 15vh;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin; 
+    scrollbar-color: transparent transparent; 
+    @media screen and (max-width: 768px){
+        padding-top: 25vh;
+    }
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.footer {
+    color: var(--secondary);
+    padding: 20px;
+    text-align: center; 
+  }
+  
+  .footer p {
+    margin: 5px 0; 
+  }
+  
+  .footer a {
+    color: var(--secondary); 
+    text-decoration: underline;
+}
+/*Hero Text*/
 .maintext{
     padding-left: 5vw;
     padding-right: 5vw;
@@ -50,58 +87,28 @@
     padding-right: 1em;  
   }
 
-  .header{
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 1.5vh;
-    flex-direction: row;
-    align-items: center;
+
+/*Weather Cards*/
+
+.container{
+    width: 90vw;
+    border: 3px solid var(--secondary);
     justify-content: space-between;
-    background-color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 2rem;
     @media screen and (max-width: 768px){
         flex-direction: column;
+        
     }
-    
 }
 
-
-.logo{
-    padding-top: 2vh;
+.left h2{
+    font-size: var(--h2);
 }
 
+.right h2{
+    font-size: var(--h2);
 
-.searchbar{
-    width: max-content;
-    display: flex;
-    align-self: center;
-    padding: 0.5rem 1.15rem 0.5rem 0.5rem;
-    border-radius: 5rem;
-    border: 3px solid var(--secondary);
 }
-
-.input{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: .5rem;
-    color: var(--tertiary);
-}
-
-.searchicon{
-    color: var(--secondary);
-    cursor: pointer;
-    width: 2rem;
-}
-
-
-
-
-
-  

@@ -23,7 +23,7 @@ const Header: React.FC<Props> = ({ onSearch }) => {
           <stop offset="0.775" stop-color="#FF7A41" stop-opacity="0"/>
           </linearGradient>
           </defs>
-        </svg>
+      </svg>
       <div className={styles.searchbar}>
         <input type="text" className={styles.input} placeholder="Search..." value={location} onChange={(e) => setLocation(e.target.value)} />
         <button onClick={handleSearch}>
