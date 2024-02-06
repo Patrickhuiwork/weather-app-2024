@@ -1,0 +1,58 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    width: 90vw;
+    border: 3px solid var(--secondary);
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    border-radius: 2rem;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        
+    }
+}
+
+.left h2{
+    font-size: var(--h2);
+}
+
+.right h2{
+    font-size: var(--h2);
+
+}
+
+
+.container2{
+    margin-top: 2rem;
+    width: 90vw;
+    border: 3px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.fiveboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        
+    }
+}
+
+.weathercontainer{
+    width: 15%;
+    text-align: center;
+    @media screen and (max-width: 768px){
+        width: 100%;
+        margin-bottom: 2rem;
+        justify-content: space-between;
+    }
+}
