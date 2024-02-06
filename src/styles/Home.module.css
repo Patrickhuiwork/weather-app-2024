@@ -11,7 +11,7 @@
 }
 
 .scroll{
-    padding-top: 15vh;
+    padding-top: 12vh;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,7 @@
     scrollbar-width: thin; 
     scrollbar-color: transparent transparent; 
     @media screen and (max-width: 768px){
-        padding-top: 25vh;
+        padding-top: 20vh;
     }
 }
 
@@ -91,6 +91,7 @@
 /*Weather Cards*/
 
 .container{
+    margin-top: 2rem;
     width: 90vw;
     border: 3px solid var(--secondary);
     justify-content: space-between;
