@@ -19,7 +19,7 @@
     scrollbar-width: thin; 
     scrollbar-color: transparent transparent; 
     @media screen and (max-width: 768px){
-        padding-top: 20vh;
+        padding-top: 25vh;
     }
 }
 
@@ -50,6 +50,7 @@
 .maintext{
     padding-left: 5vw;
     padding-right: 5vw;
+    padding-top: 10vh;
 }
 
 .maintext h2 {
