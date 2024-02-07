@@ -40,10 +40,10 @@ export default function Home() {
 
   const handleSearch = async (location: string) => {
     try {
-      const currentWeatherResponse: AxiosResponse = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKEY}&units=metric`);
+      const currentWeatherResponse: AxiosResponse = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKEY}&units=metric`);
       setWeatherData(currentWeatherResponse.data);
 
-      const forecastResponse: AxiosResponse = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${APIKEY}&units=metric`);
+      const forecastResponse: AxiosResponse = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${APIKEY}&units=metric`);
       setForecastData(forecastResponse.data.list);
 
       setLocationEntered(true);
