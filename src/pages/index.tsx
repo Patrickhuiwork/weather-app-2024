@@ -82,36 +82,39 @@ export default function Home() {
                 <h2>Don’t Know The Weather Use <strong>SKY-CAST</strong></h2>
                 <ol>
                   <li>Search for a location</li>
-                  <li>Find out the current weather situation, tomorrow’s forecast, or a 6-day forecast</li>
+                  <li>Find out the current weather situation, tomorrow’s forecast, or a 5-day forecast</li>
                 </ol>
               </div>
             )}
             {weatherData && (
               <div className={styles.container}>
                 <div className={styles.left}>
-                  <h2>{weatherData.name}</h2>
-                  <p>Country: {weatherData.sys.country}</p>
-                  <p>Last updated: {new Date(weatherData.dt * 1000).toLocaleString()}</p>
+                  <h2><strong>{weatherData.name}</strong></h2>
+                  <p> <strong>Country:</strong> {weatherData.sys.country}</p>
+                  <p> <strong>Last updated:</strong> {new Date(weatherData.dt * 1000).toLocaleString()}</p>
                 </div>
                 <div className={styles.right}>
-                  <h2>Temperature: {weatherData.main.temp}°C</h2>
-                  <p>Wind speed: {weatherData.wind.speed} m/s</p>
-                  <p>Weather: {weatherData.weather[0].main}</p>
+                  <h2><strong>Temperature:</strong> {weatherData.main.temp}°C</h2>
+                  <p><strong>Wind speed: </strong>{weatherData.wind.speed} m/s</p>
+                  <p><strong>Weather:</strong> {weatherData.weather[0].main}</p>
                 </div>
               </div>
             )}
             {forecastData && groupForecastByDay().map((group, index) => (
               <div key={index} className={styles.container2}>
-                <h2>{group.date}</h2>
+                <h2><strong>{group.date}</strong></h2>
                 <div className={styles.fiveboxes}>
                   {group.dailyForecast.map((forecast, idx) => (
                     <div key={idx} className={styles.weathercontainer}>
                       <div>
-                        <p>Weather Condition: {forecast.weather[0].main}</p>
+                      {forecast.weather[0].main === 'Clear' && <img src= "/Icons/sunny.svg" alt="Sunny" />}
+                        {forecast.weather[0].main === 'Rain' && <img src= "/Icons/rainy.svg" alt="Rainy" />}
+                        {forecast.weather[0].main === 'Clouds' && <img src= "/Icons/cloudy.svg" alt="Cloudy" />}
+                        <p><strong>Weather Condition:</strong> {forecast.weather[0].main}</p>
                       </div>
                       <div>
-                        <p>Time: {new Date(forecast.dt_txt).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
-                        <p>Temperature: {forecast.main.temp.toFixed(1)}°C</p>
+                        <p><strong>Time:</strong> {new Date(forecast.dt_txt).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
+                        <p><strong>Temperature:</strong> {forecast.main.temp.toFixed(1)}°C</p>
                       </div>
                     </div>
                   ))}

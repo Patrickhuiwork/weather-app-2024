@@ -33,7 +33,9 @@ body {
   font-family: 'General Sans', sans-serif;
 }
 
-
+strong{
+  font-weight: 500;
+}
 
 
 {
