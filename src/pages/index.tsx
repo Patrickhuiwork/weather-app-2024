@@ -122,11 +122,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <footer className={styles.footer}>
-            <p>Created By : Patrick Hui</p>
-            <p>Powered By : <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">OpenWeather</a></p>
-          </footer>
         </div>
+        <footer className={styles.footer}>
+          <p>Created By : Patrick Hui</p>
+          <p>Powered By : <a href="https://openweathermap.org/" target="_blank" rel="noreferrer">OpenWeather</a></p>
+        </footer>
     </>
   );
 }
