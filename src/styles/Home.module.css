@@ -114,3 +114,43 @@
     font-size: var(--h2);
 
 }
+
+/*Weather Card 2 */
+.container2{
+    margin-top: 2rem;
+    width: 90vw;
+    border: 3px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.container2 h2{
+    font-size: var(--h2);
+
+    @media screen and (max-width: 768px){
+        text-align: center;
+    }
+}
+
+.fiveboxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        
+    }
+}
+
+.weathercontainer{
+    border: ;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 768px){
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+}
