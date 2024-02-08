@@ -51,3 +51,7 @@
     width: 2rem;
 }
 
+.searchicon:hover{
+    transition: ease-in-out 0.2s;
+    transform: scale(1.1);
+}

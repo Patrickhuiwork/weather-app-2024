@@ -102,21 +102,23 @@ export default function Home() {
             )}
             {forecastData && groupForecastByDay().map((group, index) => (
               <div key={index} className={styles.container2}>
-                <h2><strong>{group.date}</strong></h2>
+                <h2><strong>{new Date(group.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</strong></h2>
                 <div className={styles.fiveboxes}>
                   {group.dailyForecast.map((forecast, idx) => (
                     <div key={idx} className={styles.weathercontainer}>
-                      <div>
+                    <div>
                       {forecast.weather[0].main === 'Clear' && <img src= "/Icons/sunny.svg" alt="Sunny" />}
-                        {forecast.weather[0].main === 'Rain' && <img src= "/Icons/rainy.svg" alt="Rainy" />}
-                        {forecast.weather[0].main === 'Clouds' && <img src= "/Icons/cloudy.svg" alt="Cloudy" />}
-                        <p><strong>Weather Condition:</strong> {forecast.weather[0].main}</p>
-                      </div>
-                      <div>
-                        <p><strong>Time:</strong> {new Date(forecast.dt_txt).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
-                        <p><strong>Temperature:</strong> {forecast.main.temp.toFixed(1)}°C</p>
-                      </div>
+                      {forecast.weather[0].main === 'Rain' && <img src= "/Icons/rainy.svg" alt="Rainy" />}
+                      {forecast.weather[0].main === 'Clouds' && <img src= "/Icons/cloudy.svg" alt="Cloudy" />}
+                      <p><strong>Weather Condition:</strong> {forecast.weather[0].main}</p>
+                      <p><strong>Description:</strong> {forecast.weather[0].description}</p>
                     </div>
+                    <div>
+                      <p><strong>Time:</strong> {new Date(forecast.dt_txt).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}</p>
+                      <p><strong>Temperature:</strong> {forecast.main.temp.toFixed(1)}°C</p>
+                      <p><strong>Wind Speed:</strong> {forecast.wind.speed} m/s</p>
+                    </div>
+                  </div>
                   ))}
                 </div>
               </div>
