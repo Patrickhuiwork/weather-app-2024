@@ -4,4 +4,4 @@
 * Hui
 
 ## Description
-Web app that allows users to search for the weather based their location.
+Skye Cast is a web app that allows users to search for the weather based their location as well as look at a 5 day forecast.
